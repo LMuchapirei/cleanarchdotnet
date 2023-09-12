@@ -1,0 +1,606 @@
+PS C:\Users\Linval\personalProjects\cleanarchdotnet> la
+la : The term 'la' is not recognized as the name of a cmdlet,
+function, script file, or operable program. Check the spelling of
+the name, or if a path was included, verify that the path is
+correct and try again.
+At line:1 char:1
++ la
++ ~~
+    + CategoryInfo          : ObjectNotFound: (la:String) [], Comma
+   ndNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Linval\personalProjects\cleanarchdotnet> ls
+
+
+    Directory: C:\Users\Linval\personalProjects\cleanarchdotnet
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/10/2023  11:02 AM                BuberDinner
+-a----         9/10/2023  10:59 AM             51 global.json
+
+
+PS C:\Users\Linval\personalProjects\cleanarchdotnet> git init
+Initialized empty Git repository in C:/Users/Linval/personalProjects/cleanarchdotnet/.git/
+PS C:\Users\Linval\personalProjects\cleanarchdotnet> dotnet new gitignore
+The template "dotnet gitignore file" was created successfully.
+
+PS C:\Users\Linval\personalProjects\cleanarchdotnet> git config user.name LMuchapirei
+PS C:\Users\Linval\personalProjects\cleanarchdotnet> git config user.email h170407h@hit.ac.zw
+PS C:\Users\Linval\personalProjects\cleanarchdotnet> cd .\BuberDinner\
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  Restored c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Application\BuberDinner.Application.csproj (in 127 ms).
+  Restored C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj (in 127 ms).
+  Restored C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\BuberDinner.Api.csproj (in 127 ms).
+  2 of 5 projects are up-to-date for restore.
+  BuberDinner.Contracts -> c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Contracts\bin\Debug\net6.0\BuberDinner.Contrac
+  ts.dll
+  BuberDinner.Domain -> c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Domain\bin\Debug\net6.0\BuberDinner.Domain.dll
+  BuberDinner.Application -> c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Application\bin\Debug\net6.0\BuberDinner.App
+  lication.dll
+  BuberDinner.Infrastructure -> C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\bin\Debug\net6.0\BuberDinn
+  er.Infrastructure.dll
+  BuberDinner.Api -> C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\bin\Debug\net6.0\BuberDinner.Api.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.86
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: Unable to resolve service for type 'BuberDinner.Application.Services.Authentication.IAuthenticationService' while attempting to activate 'BuberDinner.Api.Controllers.AuthenticationController'.
+         at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+         at lambda_method2(Closure , IServiceProvider , Object[] )
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: Unable to resolve service for type 'BuberDinner.Application.Services.Authentication.IAuthenticationService' while attempting to activate 'BuberDinner.Api.Controllers.AuthenticationController'.
+         at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+         at lambda_method2(Closure , IServiceProvider , Object[] )
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: Unable to resolve service for type 'BuberDinner.Application.Services.Authentication.IAuthenticationService' while attempting to activate 'BuberDinner.Api.Controllers.AuthenticationController'.
+         at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+         at lambda_method2(Closure , IServiceProvider , Object[] )
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: Unable to resolve service for type 'BuberDinner.Application.Services.Authentication.IAuthenticationService' while attempting to activate 'BuberDinner.Api.Controllers.AuthenticationController'.
+         at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+         at lambda_method2(Closure , IServiceProvider , Object[] )
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: Unable to resolve service for type 'BuberDinner.Application.Services.Authentication.IAuthenticationService' while attempting to activate 'BuberDinner.Api.Controllers.AuthenticationController'.
+         at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+         at lambda_method2(Closure , IServiceProvider , Object[] )
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet addd .\BuberDinner.Application\ package Microsoft.Extensions.DependencyInjection.Abstractions                                               
+Could not execute because the specified command or file was not found.
+Possible reasons for this include:
+  * You misspelled a built-in dotnet command.
+  * You intended to execute a .NET program, but dotnet-addd does not exist.
+  * You intended to run a global tool, but a dotnet-prefixed executable with this name could not be found on the PATH.
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet add .\BuberDinner.Application\ package Microsoft.Extensions.DependencyInjection.Abstractions 
+  Determining projects to restore...
+  Writing C:\Users\Linval\AppData\Local\Temp\tmpC98F.tmp
+info : Adding PackageReference for package 'Microsoft.Extensions.DependencyInjection.Abstractions' into project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Application\BuberDinner.Application.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/microsoft.extensions.dependencyinjection.abstractions/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/microsoft.extensions.dependencyinjection.abstractions/index.json 329ms
+info : Restoring packages for C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Application\BuberDinner.Application.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/index.json 1181ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg 72ms
+info : Installed Microsoft.Extensions.DependencyInjection.Abstractions 7.0.0 from https://api.nuget.org/v3/index.json with content hash h3j/QfmFN4S0w4C2A6X7arXij/M/OVw3uQHSOFxnND4DyAzO1F9eMX7Eti7lU/OkSthEE0WzRsfT/Dmx86jzCw==.
+info : Package 'Microsoft.Extensions.DependencyInjection.Abstractions' is compatible with all the specified frameworks in project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Application\Bube' version '7.0.0' added to file 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Application\BuberDinner.Application.csproj'.
+this : The term 'this' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+name, or if a path was included, verify that the path is correct and try again.      
+At line:1 char:57
++     public static IServiceCollection AddInfrastructure( this IService ...
++                                                         ~~~~
+    + CategoryInfo          : ObjectNotFound: (this:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet add .\BuberDinner.Infrastructure\ package System.IdentityModel.Tokens.Jwt
+  Determining projects to restore...
+  Writing C:\Users\Linval\AppData\Local\Temp\tmp28.tmp
+info : Adding PackageReference for package 'System.IdentityModel.Tokens.Jwt' into project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/system.identitymodel.tokens.jwt/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/system.identitymodel.tokens.jwt/index.json 1192ms
+info : Restoring packages for C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/system.identitymodel.tokens.jwt/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/system.identitymodel.tokens.jwt/index.json 1133ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.identitymodel.tokens.jwt/7.0.0/system.identitymodel.tokens.jwt.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.identitymodel.tokens.jwt/7.0.0/system.identitymodel.tokens.jwt.7.0.0.nupkg 61ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.jsonwebtokens/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.jsonwebtokens/index.json 1150ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.jsonwebtokens/7.0.0/microsoft.identitymodel.jsonwebtokens.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.jsonwebtokens/7.0.0/microsoft.identitymodel.jsonwebtokens.7.0.0.nupkg 59ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/index.json 1287ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/7.0.0/microsoft.identitymodel.tokens.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/7.0.0/microsoft.identitymodel.tokens.7.0.0.nupkg 61ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.logging/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.logging/index.json 1130ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.logging/7.0.0/microsoft.identitymodel.logging.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.logging/7.0.0/microsoft.identitymodel.logging.7.0.0.nupkg 65ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.abstractions/index.json 1143ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.abstractions/7.0.0/microsoft.identitymodel.abstractions.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.abstractions/7.0.0/microsoft.identitymodel.abstractions.7.0.0.nupkg 81ms
+info : Installed Microsoft.IdentityModel.Logging 7.0.0 from https://api.nuget.org/v3/index.json with content hash 6I35Kt2/PQZAyUYLo3+QgT/LubZ5/4Ojelkbyo8KKdDgjMbVocAx2B3P5V7iMCz+rsAe/RLr6ql87QKnHtI+aw==.
+info : Installed Microsoft.IdentityModel.Abstractions 7.0.0 from https://api.nuget.org/v3/index.json with content hash 7iSWSRR72VKeonFdfDi43Lvkca98Y0F3TmmWhRSuHbkjk/IKUSO0Qd272LQFZpi5eDNQNbUXy3o4THXhOAU6cw==.
+info : Installed System.IdentityModel.Tokens.Jwt 7.0.0 from https://api.nuget.org/v3/index.json with content hash 3OpN2iJf8lxpzVeFeeZSLtR3co6uKBs3VudS3PkkgdX5WF9fqqdhRMYf7WbkxqWQP/9RpoFbD3RimhfJe3hlQQ==.
+info : Installed Microsoft.IdentityModel.JsonWebTokens 7.0.0 from https://api.nuget.org/v3/index.json with content hash N+hUPsFZs+IhlMU+qmX8NnYVB9uMxVdcWoPIhKo4oHDR/yuIFh19SVZeFby15cm8S9yedynOcfs7TU5oDCheZw==.
+info : Installed Microsoft.IdentityModel.Tokens 7.0.0 from https://api.nuget.org/v3/index.json with content hash dxYqmmFLsjBQZ6F6a4XDzrZ1CTxBRFVigJvWiNtXiIsT6UlYMxs9ONMaGx9XKzcxmcgEQ2ADuCqKZduz0LR9Hw==.
+info : Package 'System.IdentityModel.Tokens.Jwt' is compatible with all the specified frameworks in project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.
+info : PackageReference for package 'System.IdentityModel.Tokens.Jwt' version '7.0.0'uberDinner\BuberDinner.Infrastructure\obj\project.assets.json
+log  : Restored C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj (in 6.99 sec).
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  Restored C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.
+  Contracts\BuberDinner.Contracts.csproj (in 114 ms).
+  Restored C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner. 
+  Domain\BuberDinner.Domain.csproj (in 114 ms).
+  Restored c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.
+  Infrastructure\BuberDinner.Infrastructure.csproj (in 235 ms).
+  Restored c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner. 
+  Application\BuberDinner.Application.csproj (in 213 ms).
+  Restored C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner. 
+  Api\BuberDinner.Api.csproj (in 235 ms).
+  BuberDinner.Domain -> C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner
+  \BuberDinner.Domain\bin\Debug\net6.0\BuberDinner.Domain.dll
+  BuberDinner.Contracts -> C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDin
+  ner\BuberDinner.Contracts\bin\Debug\net6.0\BuberDinner.Contracts.dll
+  BuberDinner.Application -> c:\Users\Linval\personalProjects\cleanarchdotnet\BuberD
+  inner\BuberDinner.Application\bin\Debug\net6.0\BuberDinner.Application.dll
+  BuberDinner.Infrastructure -> c:\Users\Linval\personalProjects\cleanarchdotnet\Bub
+  erDinner\BuberDinner.Infrastructure\bin\Debug\net6.0\BuberDinner.Infrastructure.dl 
+  l
+  BuberDinner.Api -> C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\Bu
+  berDinner.Api\bin\Debug\net6.0\BuberDinner.Api.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.42
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '128' bits. (Parameter 'keyBytes')
+         at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+         at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+         at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+         at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+         at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+         at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+         at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+         at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+         at BuberDinner.Infrastructure.Authentication.JwtTokenGenerator.GenerateToken(Guid userId, String firstName, String lastname) in C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\Authentication\JwtTokenGenerator.cs:line 33
+         at BuberDinner.Application.Services.Authentication.AuthenticationService.Register(String firstName, String lastName, String email, String password) in C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Application\Services\Authentication\AuthenticationService.cs:line 32
+         at BuberDinner.Api.Controllers.AuthenticationController.Register(RegisterRequest request) in C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\Controllers\AuthenticationController.cs:line 19
+         at lambda_method1(Closure , Object , Object[] )
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+waited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+t down.
+t down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet add .\BuberDinner.Infrastructure\ package Microsoft.Extensions.Configuration
+  Determining projects to restore...
+  Writing C:\Users\Linval\AppData\Local\Temp\tmpAB9C.tmp
+info : Adding PackageReference for package 'Microsoft.Extensions.Configuration' into project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/microsoft.extensions.configuration/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/microsoft.extensions.configuration/index.json 1154ms
+info : Restoring packages for C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration/index.json 1143ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg 68ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.abstractions/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.primitives/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.abstractions/index.json 1148ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg     
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg 122ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.primitives/index.json 1350ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg 51ms
+info : Installed Microsoft.Extensions.Primitives 7.0.0 from https://api.nuget.org/v3/index.json with content hash um1KU5kxcRp3CNuI8o/GrZtD4AIOXDk+RLsytjZ9QPok3ttLUelLKpilVPuaFT3TFjOhSibUAso0odbOaCDj3Q==.
+info : Installed Microsoft.Extensions.Configuration.Abstractions 7.0.0 from https://api.nuget.org/v3/index.json with content hash f34u2eaqIjNO9YLHBz8rozVZ+TcFiFs0F3r7nUJd7FRkVSxk8u4OpoK226mi49MwexHOR2ibP9MFvRUaLilcQQ==.
+info : Installed Microsoft.Extensions.Configuration 7.0.0 from https://api.nuget.org/v3/index.json with content hash tldQUBWt/xeH2K7/hMPPo5g8zuLc3Ro9I5d4o/XrxvxOCA2EZBtW7bCHHTc49fcBtvB8tLAb/Qsmfrq+2SJ4vA==.
+info : Package 'Microsoft.Extensions.Configuration' is compatible with all the specified frameworks in project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.
+info : PackageReference for package 'Microsoft.Extensions.Configuration' version '7.0.0' added to file 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.
+info : Writing assets file to disk. Path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\obj\project.assets.json
+log  : Restored C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj (in 3.49 sec).
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet add .\BuberDinner.Infrastructure\ package Microsoft.Extensions.Options.ConfigurationExtensions
+  Determining projects to restore...
+  Writing C:\Users\Linval\AppData\Local\Temp\tmp3489.tmp
+info : Adding PackageReference for package 'Microsoft.Extensions.Options.ConfigurationExtensions' into project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/microsoft.extensions.options.configurationextensions/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/microsoft.extensions.options.configurationextensions/index.json 1431ms
+info : Restoring packages for C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.options.configurationextensions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.options.configurationextensions/index.json 1313ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.options.configurationextensions/7.0.0/microsoft.extensions.options.configurationextensions.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.options.configurationextensions/7.0.0/microsoft.extensions.options.configurationextensions.7.0.0.nupkg 75ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.binder/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.binder/index.json 1133ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.binder/7.0.0/microsoft.extensions.configuration.binder.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.configuration.binder/7.0.0/microsoft.extensions.configuration.binder.7.0.0.nupkg 1153ms
+info : Installed Microsoft.Extensions.Options.ConfigurationExtensions 7.0.0 from https://api.nuget.org/v3/index.json with content hash 95UnxZkkFdXxF6vSrtJsMHCzkDeSMuUWGs2hDT54cX+U5eVajrCJ3qLyQRW+CtpTt5OJ8bmTvpQVHu1DLhH+cA==.
+info : Installed Microsoft.Extensions.Configuration.Binder 7.0.0 from https://api.nuget.org/v3/index.json with content hash tgU4u7bZsoS9MKVRiotVMAwHtbREHr5/5zSEV+JPhg46+ox47Au84E3D2IacAaB0bk5ePNaNieTlPrfjbbRJkg==.
+error: NU1605: Detected package downgrade: Microsoft.Extensions.Options from 7.0.0 to 1.0.0. Reference the package directly from the project to select a different version.
+error:  BuberDinner.Infrastructure -> Microsoft.Extensions.Options.ConfigurationExtensions 7.0.0 -> Microsoft.Extensions.Options (>= 7.0.0)
+error:  BuberDinner.Infrastructure -> Microsoft.Extensions.Options (>= 1.0.0)        
+info : Package 'Microsoft.Extensions.Options.ConfigurationExtensions' is compatible with all the specified frameworks in project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.  
+info : PackageReference for package 'Microsoft.Extensions.Options.ConfigurationExtensions' version '7.0.0' added to file 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.
+info : Generating MSBuild file C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\obj\BuberDinner.Infrastructure.csproj.nuget.g.props.
+info : Writing assets file to disk. Path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\obj\project.assets.json
+log  : Failed to restore C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj (in 4.18 sec).
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\BuberDi
+nner.Api.csproj : error NU1605: Detected package downgrade: Microsoft.Extensions.Opt 
+ions from 7.0.0 to 1.0.0. Reference the package directly from the project to select  
+a different version.  [C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\ 
+BuberDinner.sln]
+C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\BuberDi 
+nner.Api.csproj : error NU1605:  BuberDinner.Api -> BuberDinner.Infrastructure -> Mi 
+crosoft.Extensions.Options.ConfigurationExtensions 7.0.0 -> Microsoft.Extensions.Opt 
+ions (>= 7.0.0)  [C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\Buber 
+Dinner.sln]
+C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\BuberDi 
+nner.Api.csproj : error NU1605:  BuberDinner.Api -> BuberDinner.Infrastructure -> Mi 
+crosoft.Extensions.Options (>= 1.0.0) [C:\Users\Linval\personalProjects\cleanarchdot 
+net\BuberDinner\BuberDinner.sln]
+c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastruct 
+ure\BuberDinner.Infrastructure.csproj : error NU1605: Detected package downgrade: Mi 
+crosoft.Extensions.Options from 7.0.0 to 1.0.0. Reference the package directly from  
+the project to select a different version.  [C:\Users\Linval\personalProjects\cleana 
+rchdotnet\BuberDinner\BuberDinner.sln]
+c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastruct 
+ure\BuberDinner.Infrastructure.csproj : error NU1605:  BuberDinner.Infrastructure -> 
+ Microsoft.Extensions.Options.ConfigurationExtensions 7.0.0 -> Microsoft.Extensions. 
+Options (>= 7.0.0)  [C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\Bu 
+berDinner.sln]
+c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastruct 
+ure\BuberDinner.Infrastructure.csproj : error NU1605:  BuberDinner.Infrastructure -> 
+ Microsoft.Extensions.Options (>= 1.0.0) [C:\Users\Linval\personalProjects\cleanarch 
+dotnet\BuberDinner\BuberDinner.sln]
+  Failed to restore c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\Bub
+  erDinner.Infrastructure\BuberDinner.Infrastructure.csproj (in 253 ms).
+  Failed to restore C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\Bub 
+  erDinner.Api\BuberDinner.Api.csproj (in 253 ms).
+  3 of 5 projects are up-to-date for restore.
+
+Build FAILED.
+
+C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\BuberDi 
+nner.Api.csproj : error NU1605: Detected package downgrade: Microsoft.Extensions.Opt 
+ions from 7.0.0 to 1.0.0. Reference the package directly from the project to select  
+a different version.  [C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\ 
+BuberDinner.sln]
+C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\BuberDi 
+nner.Api.csproj : error NU1605:  BuberDinner.Api -> BuberDinner.Infrastructure -> Mi 
+crosoft.Extensions.Options.ConfigurationExtensions 7.0.0 -> Microsoft.Extensions.Opt 
+ions (>= 7.0.0)  [C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\Buber 
+Dinner.sln]
+C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\BuberDi 
+nner.Api.csproj : error NU1605:  BuberDinner.Api -> BuberDinner.Infrastructure -> Mi 
+crosoft.Extensions.Options (>= 1.0.0) [C:\Users\Linval\personalProjects\cleanarchdot 
+net\BuberDinner\BuberDinner.sln]
+c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastruct 
+ure\BuberDinner.Infrastructure.csproj : error NU1605: Detected package downgrade: Mi 
+crosoft.Extensions.Options from 7.0.0 to 1.0.0. Reference the package directly from  
+the project to select a different version.  [C:\Users\Linval\personalProjects\cleana 
+rchdotnet\BuberDinner\BuberDinner.sln]
+c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastruct 
+ure\BuberDinner.Infrastructure.csproj : error NU1605:  BuberDinner.Infrastructure -> 
+ Microsoft.Extensions.Options.ConfigurationExtensions 7.0.0 -> Microsoft.Extensions. 
+Options (>= 7.0.0)  [C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\Bu 
+berDinner.sln]
+c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastruct 
+ure\BuberDinner.Infrastructure.csproj : error NU1605:  BuberDinner.Infrastructure -> 
+ Microsoft.Extensions.Options (>= 1.0.0) [C:\Users\Linval\personalProjects\cleanarch 
+dotnet\BuberDinner\BuberDinner.sln]
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:00.81
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet add .\BuberDinner.Infrastructure\ package Microsoft.Extensions.Options.ConfigurationExtensions    
+  Determining projects to restore...
+  Writing C:\Users\Linval\AppData\Local\Temp\tmp19C3.tmp
+info : Adding PackageReference for package 'Microsoft.Extensions.Options.ConfigurationExtensions' into project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.
+info :   CACHE https://api.nuget.org/v3/registration5-gz-semver2/microsoft.extensions.options.configurationextensions/index.json
+info : Restoring packages for C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj...
+error: NU1605: Detected package downgrade: Microsoft.Extensions.Options from 7.0.0 to 1.0.0. Reference the package directly from the project to select a different version.
+error:  BuberDinner.Infrastructure -> Microsoft.Extensions.Options.ConfigurationExtensions 7.0.0 -> Microsoft.Extensions.Options (>= 7.0.0)
+error:  BuberDinner.Infrastructure -> Microsoft.Extensions.Options (>= 1.0.0)        
+info : Package 'Microsoft.Extensions.Options.ConfigurationExtensions' is compatible with all the specified frameworks in project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.  
+info : PackageReference for package 'Microsoft.Extensions.Options.ConfigurationExtensions' version '7.0.0' updated in file 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.        
+info : Writing assets file to disk. Path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\obj\project.assets.json
+log  : Failed to restore C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj (in 136 ms).
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet restore      
+  Determining projects to restore...                                                 
+  Restored C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.
+  Api\BuberDinner.Api.csproj (in 192 ms).
+  4 of 5 projects are up-to-date for restore.
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet add .\BuberDinner.Infrastructure\ package Microsoft.Extensions.Options.ConfigurationExtensions    
+  Determining projects to restore...
+  Writing C:\Users\Linval\AppData\Local\Temp\tmp9DE8.tmp
+info : Adding PackageReference for package 'Microsoft.Extensions.Options.ConfigurationExtensions' into project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.
+info :   CACHE https://api.nuget.org/v3/registration5-gz-semver2/microsoft.extensions.options.configurationextensions/index.json
+info : Restoring packages for C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj...
+info : Package 'Microsoft.Extensions.Options.ConfigurationExtensions' is compatible with all the specified frameworks in project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.  
+info : PackageReference for package 'Microsoft.Extensions.Options.ConfigurationExtensions' version '7.0.0' updated in file 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj'.        
+info : Writing assets file to disk. Path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\obj\project.assets.json
+log  : Restored C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj (in 85 ms).
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  Restored c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.
+  Infrastructure\BuberDinner.Infrastructure.csproj (in 192 ms).
+  4 of 5 projects are up-to-date for restore.
+  BuberDinner.Contracts -> c:\Users\Linval\personalProjects\cleanarchdotnet\BuberDin
+  ner\BuberDinner.Contracts\bin\Debug\net6.0\BuberDinner.Contracts.dll
+  BuberDinner.Domain -> C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner
+  \BuberDinner.Domain\bin\Debug\net6.0\BuberDinner.Domain.dll
+  BuberDinner.Application -> c:\Users\Linval\personalProjects\cleanarchdotnet\BuberD
+  inner\BuberDinner.Application\bin\Debug\net6.0\BuberDinner.Application.dll
+  BuberDinner.Infrastructure -> c:\Users\Linval\personalProjects\cleanarchdotnet\Bub
+  erDinner\BuberDinner.Infrastructure\bin\Debug\net6.0\BuberDinner.Infrastructure.dl 
+  l
+  BuberDinner.Api -> C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\Bu
+  berDinner.Api\bin\Debug\net6.0\BuberDinner.Api.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.72
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\                                                                  
+Building...
+C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Infrastruct
+ure\DependencyInjection.cs(4,7): error CS0138: A 'using namespace' directive can onl 
+ng static' directive instead [C:\Users\Linval\personalProjects\cleanarchdotnet\Buber
+Dinner\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj]
+
+The build failed. Fix the build errors and run again.
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet run --project .\BuberDinner.Api\
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7058
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5226
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\BuberDinner.Api\ 
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> dotnet user-secrets init --project .\BuberDinner.Api\
+Set UserSecretsId to '57c53090-2fbb-44d6-b0ac-0b932256379c' for MSBuild project 'C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner\.\BuberDinner.Api\BuberDinner.Api.csproj'.
+PS C:\Users\Linval\personalProjects\cleanarchdotnet\BuberDinner> 
