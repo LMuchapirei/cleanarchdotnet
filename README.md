@@ -17,3 +17,10 @@
   Martin Fowler
   "Mediates between the domain and data mapping layer using a collection-like interface for accessing domain objects"
 
+Global Error Handling Approaches
+
+1. Via middleware
+2. Via exception filter attribute
+3. Problem Details
+4. Via error endpoint
+5. Custom Problem Details Factory
