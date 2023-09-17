@@ -1,14 +1,13 @@
-using BuberDinner.Application.Common.Errors;
 using BuberDinner.Application.Services.Authentication;
 using BuberDinner.Contracts.Authentication;
-using FluentResults;
+using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
-
+using BuberDinner.Domain.Common.Errors;
 namespace BuberDinner.Api.Controllers;
 
-[ApiController]
+
 [Route("auth")]
-public class AuthenticationController: ControllerBase 
+public class AuthenticationController: ApiController 
 {
     private readonly IAuthenticationService _authenticationService;
 
@@ -18,23 +17,17 @@ public class AuthenticationController: ControllerBase
     }
     [HttpPost("register")]
     public IActionResult Register(RegisterRequest request){
-        Result<AuthenticationResult> registerResult = _authenticationService.Register(
+        ErrorOr<AuthenticationResult> authResult = _authenticationService.Register(
             request.FirstName,
             request.LastName,
             request.Email,
             request.Password
         );
-        if(registerResult.IsSuccess)
-        {
-            return Ok(MapAuthResult(registerResult.Value));
+        return authResult.Match(
+            authResult=>Ok(MapAuthResult(authResult)),
+            errors=> Problem(errors)
+        );
         }
-        var firstError = registerResult.Errors[0];
-        if(firstError is DuplicateEmailError)
-        {
-            return Problem(statusCode:StatusCodes.Status409Conflict,title:"Email already exists");
-        }
-        return Problem();
-    }
 
     private static AuthenticationResponse MapAuthResult(AuthenticationResult authResult)
     {
@@ -53,13 +46,11 @@ public class AuthenticationController: ControllerBase
             request.Email,
             request.Password
         );
-        var response = new AuthenticationResponse(
-            authResult.User.Id,
-            authResult.User.FirstName,
-            authResult.User.LastName,
-            authResult.User.Email,
-            authResult.Token
+
+        return authResult.Match(
+            authResult=>Ok(MapAuthResult(authResult)),
+            errors=>Problem(errors)
         );
-        return Ok(response);
+
     }
 }
