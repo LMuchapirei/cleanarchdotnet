@@ -1,4 +1,3 @@
-using BuberDinner.Api.Filters;
 using BuberDinner.Application.Services.Authentication;
 using BuberDinner.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
@@ -7,8 +6,6 @@ namespace BuberDinner.Api.Controllers;
 
 [ApiController]
 [Route("auth")]
-// Add our ErrorHandlingFilter over here
-// [ErrorHandlingFilter] but if we dont want to add it on every controller we can add it inside the application builder
 public class AuthenticationController: ControllerBase 
 {
     private readonly IAuthenticationService _authenticationService;

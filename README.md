@@ -66,3 +66,12 @@ Consumers should not automatically dereference the type URI.
 The "detail" member , if present, ought to focus on helping the client correct the problem, rather than giving debugging information
 Consumers SHOULD NOT parse the "detail" member for information;
 extensions are more suitable and less error-prone ways to obtain such information.
+
+Flow control
+
+1. Via Exceptions
+2. Via OneOf
+3. Via FluentResults
+4. Via ErrorOr & Domain Errors
+
+Switch over from the global error jandling
