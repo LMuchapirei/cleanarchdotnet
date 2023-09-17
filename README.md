@@ -75,3 +75,7 @@ Flow control
 4. Via ErrorOr & Domain Errors
 
 Switch over from the global error jandling
+
+
+
+
