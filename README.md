@@ -74,7 +74,50 @@ Flow control
 3. Via FluentResults
 4. Via ErrorOr & Domain Errors
 
-Switch over from the global error jandling
+Switch over from the global error handling
+
+
+CQS(Command Query Seperation)
+"A command (procedure) does something but does not return a result"
+A query (function or attribute) returns a result but does not change the state (Bertrand Meyer)
+
+Example
+
+interface IStack<T>
+{
+  void Push(T value); // Command
+  T Peek();          // Query
+T Pop();            // Doesn't have a place
+}
+
+
+CQRS
+(Command query responsibility segregation):
+"The fundamental difference is that in CQRS objects are split into two objects, one containing the Commands and one containing the Queries Greg Young"
+
+Looking at the stack example we will have two interfaces representing the actions that either encapsulate a command or a query
+
+
+interface ICommandStack<T>
+{
+  void Push(T value);
+  T Pop();
+}
+// am l changing data , thus a command(Change the state)
+
+interface IQueryStack<T>
+{
+  T Peek();
+}
+
+// am l querying the data, thus a query (Get a snapshot of the current state)
+
+
+
+
+
+
+
 
 
 
