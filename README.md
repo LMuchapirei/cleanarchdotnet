@@ -112,10 +112,24 @@ interface IQueryStack<T>
 
 // am l querying the data, thus a query (Get a snapshot of the current state)
 
+Implementation in the Application Layer
+Authentication
+
+ Common
+   - AuthenticationResult
+ Commands
+   Register
+    - RegisterCommand
+    - RegisterCommandHandler
+ Queries
+  Login
+    -LoginQuery
+    -LoginQueryHandler
+App grows horizontally with more and more isolated features instead of growing vertically
 
 
-
-
+AuthController passing an event through the mediator 
+The Mediator then tells the Application handler to invoke a handler to handle the particular action of sort thats either a query or a command of sort we want
 
 
 
