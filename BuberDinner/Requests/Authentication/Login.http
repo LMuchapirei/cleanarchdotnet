@@ -3,6 +3,6 @@ POST {{host}}/auth/login
 Content-Type: application/json
 
 {
-    "email":"muchapireil@gmail.com",
+    "email":"",
     "password":"zipassword"
 }
