@@ -23,7 +23,7 @@ public sealed class AverageRating : ValueObject
         Value = ((Value * NumRatings) + rating.Value) / ++NumRatings;
     }
 
-    internal void RemoveRating(Rating rating)
+    public void RemoveRating(Rating rating)
     {
         Value = ((Value * NumRatings) - rating.Value) / --NumRatings;
     }

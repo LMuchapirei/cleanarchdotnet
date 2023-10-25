@@ -1,8 +1,8 @@
-using BuberDinner.Domain.Entities;
+using BuberDinner.Domain.UserAggregate;
 
 namespace BuberDinner.Application.Common.Interfaces.Authentication;
 
-public interface IJwtTokenGenerator 
+public interface IJwtTokenGenerator
 {
     string GenerateToken(User user);
 }

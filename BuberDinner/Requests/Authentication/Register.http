@@ -1,13 +1,11 @@
-@host = http://localhost:5226
+@host=http://localhost:5179
+
 POST {{host}}/auth/register
 Content-Type: application/json
 
 {
-    "firstName": "Linval",
-    "lastName":"Muchapirei",
-    "email":"muchapireil@gmail.com",
-    "password":"zipassword"
+    "firstName": "Amiko",
+    "lastName": "Dark",
+    "email": "amichai@mantinband.com",
+    "password": "Amiko1232!"
 }
-
-### three hashes to add multiple requests
-POST {{host}}/auth/register
