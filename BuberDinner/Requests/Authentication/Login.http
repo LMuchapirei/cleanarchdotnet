@@ -1,8 +1,9 @@
-@host = http://localhost:5226
+@host=http://localhost:5179
+
 POST {{host}}/auth/login
 Content-Type: application/json
 
 {
-    "email":"muchapireil@gmail.com",
-    "password":"zipassword"
+    "email": "linvalm@linvalmuchapirei.com",
+    "password": "testo123!"
 }

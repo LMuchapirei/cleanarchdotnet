@@ -1,8 +1,7 @@
-using BuberDinner.Domain.Entities;
+using BuberDinner.Domain.UserAggregate;
 
-namespace  BuberDinner.Application.Authentication.Common;
+namespace BuberDinner.Application.Authentication.Common;
 
-public record AuthenticationResult (
+public record AuthenticationResult(
     User User,
-    string Token
-);
+    string Token);

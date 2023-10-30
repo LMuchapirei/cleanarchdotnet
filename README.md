@@ -131,7 +131,8 @@ App grows horizontally with more and more isolated features instead of growing v
 AuthController passing an event through the mediator 
 The Mediator then tells the Application handler to invoke a handler to handle the particular action of sort thats either a query or a command of sort we want
 
-
+Part 10 & 11 are videos to understand the concepts
+Revist them
 
 
 
