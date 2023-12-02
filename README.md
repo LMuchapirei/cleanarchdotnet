@@ -132,8 +132,39 @@ AuthController passing an event through the mediator
 The Mediator then tells the Application handler to invoke a handler to handle the particular action of sort thats either a query or a command of sort we want
 
 Part 10 & 11 are videos to understand the concepts
-Revist them
+Revisit them
 
 
+Persistance Ignorance
+
+Our domain layer logic and models shouldn't defined based on the database choice
+
+DD Building Blocks 1
+
+Aggregate identifier should be unique within the entire system
+
+[ Aggregate 1 and Aggregate 2 should not have the same identifiers]
+
+DDD Building Blocks 2
+- Entity identifier should be unique within the aggregate
+
+DDD Building Blocks 3
+- Value Objects don't have an identifier
+
+DDD Building Blocks 4
+- Changes to one aggregate should not affect other aggregates
 
 
+Table Splitting/Table Sharing
+- Two or more entities that share a single table.
+
+
+Composite Key
+- Two or more columns that composes a key-Conventions will only set up a composite key in specific cases - like for any owned type collection.
+
+
+Surrogate Key
+- A key of any type that is live for the sole purpose of uniquely identifying a record in table
+
+Owned Entity
+- EF Core allows you to model entity types that can only ever appear on navigation properties of other entity types. These are called owned entity types

@@ -1,5 +1,5 @@
 @host=http://localhost:5179
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTY5NGYxNS1lYTdjLTRmMTctODIyNi02MGJhMmJhYmNlNjYiLCJnaXZlbl9uYW1lIjoiQW1pa28iLCJmYW1pbHlfbmFtZSI6IkRhcmsiLCJqdGkiOiI2NzY5OWZlMS1kOWJkLTQ2YTctYTI3Ni05MGJmMTJhZjJhZDQiLCJleHAiOjE2Njg4NjQwNDAsImlzcyI6IkJ1YmVyRGlubmVyIiwiYXVkIjoiQnViZXJEaW5uZXIifQ.dTf7dwUz2AN8C-n-qnaD-M7T80jbE3RL5ol0CqbQTS4
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxN2VhMDA1YS1kNjVkLTQ5YTUtYjZjZi05ZmFmNjIxZTNkZDIiLCJnaXZlbl9uYW1lIjoiTGludmFsIiwiZmFtaWx5X25hbWUiOiJXaHlHaXZlIiwianRpIjoiODRjODYwYmEtNzA3NS00MGJlLThkOWEtNjM4OGY0ZTk2NTc2IiwiZXhwIjoxNjk4MjQxNTU0LCJpc3MiOiJCdWJlckRpbm5lciIsImF1ZCI6IkJ1YmVyRGlubmVyIn0.RTBtPLwDhQX8Z81sgkCuNsrQpyBrozA3fXqCbjBsfK4
 @hostId=asdf
 
 POST {{host}}/hosts/{{hostId}}/menus
@@ -7,8 +7,8 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "name": "",
-    "description": "",
+    "name": "Test",
+    "description": "Test Description",
     "sections": [
     ]
 }

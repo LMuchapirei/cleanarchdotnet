@@ -1,10 +1,14 @@
+@host=http://localhost:5179
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlNmUyNDYzYS04ZDg2LTQ2ZWEtOTJmMi01MTg2ZTllYWQwZDYiLCJnaXZlbl9uYW1lIjoiTGludmFsIiwiZmFtaWx5X25hbWUiOiJXaHlHaXZlIiwianRpIjoiZjk5ZjVkMWMtZWZkNC00MGE2LWI2YWItMzA0M2U4M2FlZDM2IiwiZXhwIjoxNzAxMTU4OTg0LCJpc3MiOiJCdWJlckRpbm5lciIsImF1ZCI6IkJ1YmVyRGlubmVyIn0.O76OlA1X2fGsKRVBftnS1Jv-7yoZpdl_nf-H0ieRCRU
+@hostId=asdf
+
 POST {{host}}/hosts/{{hostId}}/menus
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "name": "Yummy Menu",
-    "description": "A menu with yummy food",
+    "name": "",
+    "description": "A menu with some tasty yummy food",
     "sections": [
         {
             "name": "Appetizers",
