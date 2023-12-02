@@ -1,5 +1,6 @@
 using BuberDinner.Domain.HostAggregate.ValueObjects;
 using BuberDinner.Domain.MenuAggregate;
+using BuberDinner.Domain.MenuAggregate.Entities;
 using BuberDinner.Domain.MenuAggregate.ValueObjects;
 
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,40 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
     {
         ConfigureMenusTable(builder);
         ConfigureMenuSectionsTable(builder);
+        ConfigureMenuDinnerIdsTable(builder);
+        ConfigureMenuReviewIdsTable(builder);
+    }
+
+    private void ConfigureMenuDinnerIdsTable(EntityTypeBuilder<Menu> builder)
+    {
+       builder.OwnsMany(m => m.DinnerIds, dib =>
+       {
+        dib.ToTable("MenuDinnerIds");
+        dib.WithOwner().HasForeignKey("MenuId");
+        dib.HasKey("Id");
+        dib.Property(d => d.Value)
+            .HasColumnName("DinnerId")
+            .ValueGeneratedNever();
+       });
+
+       builder.Metadata.FindNavigation(nameof(Menu.DinnerIds))!
+        .SetPropertyAccessMode(PropertyAccessMode.Field);
+    }
+
+    private void ConfigureMenuReviewIdsTable(EntityTypeBuilder<Menu> builder)
+    {
+         builder.OwnsMany(m => m.MenuReviewIds, rid =>
+       {
+        rid.ToTable("MenuReviewIds");
+        rid.WithOwner().HasForeignKey("MenuId");
+        rid.HasKey("Id");
+        rid.Property(d => d.Value)
+            .HasColumnName("ReviewId")
+            .ValueGeneratedNever();
+       });
+
+         builder.Metadata.FindNavigation(nameof(Menu.MenuReviewIds))!
+        .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 
     private void ConfigureMenuSectionsTable(EntityTypeBuilder<Menu> builder)
@@ -40,13 +75,22 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             sb.OwnsMany(s => s.Items, ib =>
             {
                 ib.ToTable("MenuItems");
+                ib.HasKey(nameof(MenuItem.Id), "MenuSectionId", "MenuId");
                 ib.WithOwner().HasForeignKey("MenuSectionId", "MenuId");
                 ib.Property(i => i.Id)
+                    .HasColumnName("MenuItemId")
                     .ValueGeneratedNever()
                     .HasConversion(id => id.Value, value => MenuItemId.Create(value));
-            });
-
+                ib.Property(s => s.Name)
+                .HasMaxLength(100);
+                ib.Property(s => s.Description)
+                    .HasMaxLength(100);
+                });
+            sb.Navigation(s => s.Items).Metadata.SetField("_items");
+            sb.Navigation(s => s.Items).UsePropertyAccessMode(PropertyAccessMode.Field);
         });
+        builder.Metadata.FindNavigation(nameof(Menu.Sections))!
+         .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 
     private void ConfigureMenusTable(EntityTypeBuilder<Menu> builder)
